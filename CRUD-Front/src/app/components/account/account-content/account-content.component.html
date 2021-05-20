@@ -46,7 +46,7 @@
     <ng-container matColumnDef="delete">
       <th mat-header-cell *matHeaderCellDef> Delete </th>
       <td mat-cell *matCellDef="let element">
-        <a mat-button (click)="cancel()">
+        <a mat-button>
           <span class="material-icons" routerLink="cancel-friend/{{element._id}}" id="delete">
             delete_outline
           </span>

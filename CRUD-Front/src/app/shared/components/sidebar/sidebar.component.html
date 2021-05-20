@@ -25,26 +25,26 @@
   <div *ngFor="let user of usersList">
     <div *ngIf="user._id === currentUserId">
 
-      <a mat-list-item  routerLink="update-user/{{currentUserId}}" routerLinkActive="list-item-active" >
+      <a mat-list-item  routerLink="/update-user/{{currentUserId}}" routerLinkActive="list-item-active" >
         <mat-icon>
           cake
         </mat-icon>
         {{user.age}}
       </a>
-      <a mat-list-item  routerLink="update-user/{{currentUserId}}" routerLinkActive="list-item-active" >
+      <a mat-list-item  routerLink="/update-user/{{currentUserId}}" routerLinkActive="list-item-active" >
         <mat-icon>
           group
         </mat-icon>
         {{user.famille}}
       </a>
-      <a mat-list-item  routerLink="update-user/{{currentUserId}}" routerLinkActive="list-item-active" >
+      <a mat-list-item  routerLink="/update-user/{{currentUserId}}" routerLinkActive="list-item-active" >
         <mat-icon>
           transgender
 
         </mat-icon>
         {{user.race}}
       </a>
-      <a mat-list-item  routerLink="update-user/{{currentUserId}}" routerLinkActive="list-item-active" >
+      <a mat-list-item  routerLink="/update-user/{{currentUserId}}" routerLinkActive="list-item-active" >
         <mat-icon>
           local_dining
         </mat-icon>

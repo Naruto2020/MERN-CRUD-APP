@@ -1,6 +1,13 @@
 <div class="example-container">
   <mat-card >
-    <mat-toolbar >Edit User </mat-toolbar>
+    <mat-toolbar >
+      <a mat-stroked-button routerLink="/home" >
+        <span class="material-icons" id="add" >
+          arrow_back_ios
+        </span>
+      </a>
+      <h1>Edit User</h1>
+    </mat-toolbar>
     <br/>
     <form [formGroup]="options" (ngSubmit)="mettreAjour()">
 

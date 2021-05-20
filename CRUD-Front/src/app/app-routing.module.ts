@@ -35,14 +35,14 @@ const routes: Routes = [
     canActivate : [AuthGuard],
     children:[
       {
-        path:"update-user/:_id",
-        component:EditUserComponent
-      },
-      {
         path:"cancel-friend/:_id",
         component:DeleteFriendComponent
       }
     ]
+  },
+  {
+    path:"update-user/:_id",
+    component:EditUserComponent
   },
 ];
 

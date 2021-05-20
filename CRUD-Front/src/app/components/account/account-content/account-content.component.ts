@@ -52,8 +52,4 @@ currentUserId:any;
     });
   }
 
-  cancel(){
-
-  }
-
 }
