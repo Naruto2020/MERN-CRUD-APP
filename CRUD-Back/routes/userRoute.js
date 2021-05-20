@@ -13,17 +13,17 @@ router.post("/login", authController.signIn);
 router.get("/logout",checkUser , authController.logout);
 
 // Read Users
-router.get("/",checkUser, userController.getAllusers);
-router.get("/:id", checkUser, userController.getUser);
+router.get("/", userController.getAllusers);
+router.get("/:id", userController.getUser);
 
 // Update User
-router.put("/:id", checkUser, userController.editUser);
+router.put("/:id", userController.editUser);
 
 // follow & unfollow user
-router.patch("/follow/:id", checkUser, userController.followUser);
-router.patch("/unfollow/:id", checkUser, userController.unfollowUser);
+router.patch("/follow/:id", userController.followUser);
+router.patch("/unfollow/:id", userController.unfollowUser);
 
 // Delete user
-router.delete("/:id", checkUser, userController.cancelUser);
+router.delete("/:id", userController.cancelUser);
 
 module.exports = router;

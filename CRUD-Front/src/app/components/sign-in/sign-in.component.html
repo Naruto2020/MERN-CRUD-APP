@@ -30,7 +30,10 @@
 
       <mat-form-field appearance="fill" [floatLabel]="floatLabelControl.value">
         <mat-label>password</mat-label>
-        <input matInput placeholder="Simple placeholder" formControlName="password">
+        <input matInput placeholder="Simple placeholder" formControlName="password" [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
       </mat-form-field>
       <span *ngIf="soumissionMdp" style="color: red;font-weight: bold;">le mot de passe ne correspond pas!
         <button

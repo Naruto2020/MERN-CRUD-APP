@@ -12,6 +12,7 @@ import {User} from '../model';
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit {
+  hide = true;
 
   // gestion de la validation des champs
   soumissionPseu : boolean = false;

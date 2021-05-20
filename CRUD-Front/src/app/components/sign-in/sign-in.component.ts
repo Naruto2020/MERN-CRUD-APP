@@ -9,6 +9,8 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   styleUrls: ['./sign-in.component.scss']
 })
 export class SignInComponent implements OnInit {
+  hide = true;
+
   alert:boolean= false;
   // gestions des eeruers
   soumissionMdp : boolean = false;
