@@ -1,0 +1,53 @@
+<div class="example-container">
+  <mat-card >
+    <mat-toolbar >Edit User </mat-toolbar>
+    <br/>
+    <form [formGroup]="options" (ngSubmit)="mettreAjour()">
+
+      <mat-form-field appearance="fill" [floatLabel]="floatLabelControl.value">
+        <mat-label>Age</mat-label>
+        <input matInput placeholder="age" formControlName="age" >
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" [floatLabel]="floatLabelControl.value">
+        <mat-label>Famille</mat-label>
+        <input matInput placeholder="famille" formControlName="famille">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" [floatLabel]="floatLabelControl.value">
+        <mat-label>Race</mat-label>
+        <input matInput placeholder="race" formControlName="race">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" [floatLabel]="floatLabelControl.value">
+        <mat-label>Nourriture</mat-label>
+        <input matInput placeholder="nourriture" formControlName="nourriture">
+      </mat-form-field>
+
+      <div>
+        <button type="submit" value="Edit" mat-stroked-button color="primary">Edit</button> &nbsp;
+        <button  value="fermer" mat-stroked-button color="primary" (click)="fermer()">Fermer</button>
+
+      </div>
+
+    </form>
+
+  </mat-card>
+
+  <div
+    *ngIf="alert"
+    class="alert alert-success alert-dismissible fade show"
+    role="alert"
+  >
+    <strong>success !</strong> le profil a bien été mis à jours !
+    <button
+      (click)="fermerAlert()"
+      type="button"
+      class="close"
+      data-dismiss="alert"
+      aria-label="Close"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>

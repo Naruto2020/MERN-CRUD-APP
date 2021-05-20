@@ -1,0 +1,15 @@
+<div>
+  <mat-card >
+    <mat-toolbar >Ajouter l'utilisateur ? </mat-toolbar>
+    <form [formGroup]="options">
+      <mat-form-field appearance="fill" *ngIf>
+        <mat-label>Input</mat-label>
+        <input matInput  formControlName="idTofollow">
+
+      </mat-form-field>
+      <button type="submit"  mat-raised-button (click)="follow()">Ajouter</button> &nbsp;
+      <button   mat-raised-button (click)="fermer()">fermer</button>
+    </form>
+
+  </mat-card>
+</div>

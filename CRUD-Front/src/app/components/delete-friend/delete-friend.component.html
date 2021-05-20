@@ -1,0 +1,15 @@
+<div>
+  <mat-card >
+    <mat-toolbar >Supprimer l'ami ? </mat-toolbar>
+    <form [formGroup]="options">
+      <mat-form-field appearance="fill" *ngIf>
+        <mat-label>Input</mat-label>
+        <input matInput  formControlName="idToUnfollow">
+
+      </mat-form-field>
+      <button type="submit"  mat-raised-button (click)="unfollow()">Supprimer</button> &nbsp;
+      <button   mat-raised-button (click)="fermer()">fermer</button>
+    </form>
+
+  </mat-card>
+</div>

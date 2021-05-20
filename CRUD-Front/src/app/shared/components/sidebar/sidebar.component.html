@@ -1,0 +1,62 @@
+<mat-nav-list>
+  <div class="profile-card" >
+    <div class="header" *ngFor="let user of usersList">
+      <span *ngIf="user._id === currentUserId">
+        <h2> {{user.username}} </h2>
+        <h4>{{user.email}}</h4>
+
+      </span>
+    </div>
+    <img src="https://download.vikidia.org/vikidia/fr/images/f/f2/Stephen_Hawking.jpg" alt="hawkins stephen">
+  </div>
+
+  <mat-divider></mat-divider>
+  <h2 matSubheader>Pages</h2>
+
+
+  <a mat-list-item  routerLink="/home" routerLinkActive="list-item-active" >Home</a>
+  <a mat-list-item  routerLink="/account" routerLinkActive="list-item-active" >Account</a>
+  <!--<a mat-list-item  routerLink="/add-user" routerLinkActive="list-item-active" >Add users</a>-->
+
+
+  <mat-divider></mat-divider>
+
+  <h2 matSubheader>Informations</h2>
+  <div *ngFor="let user of usersList">
+    <div *ngIf="user._id === currentUserId">
+
+      <a mat-list-item  routerLink="update-user/{{currentUserId}}" routerLinkActive="list-item-active" >
+        <mat-icon>
+          cake
+        </mat-icon>
+        {{user.age}}
+      </a>
+      <a mat-list-item  routerLink="update-user/{{currentUserId}}" routerLinkActive="list-item-active" >
+        <mat-icon>
+          group
+        </mat-icon>
+        {{user.famille}}
+      </a>
+      <a mat-list-item  routerLink="update-user/{{currentUserId}}" routerLinkActive="list-item-active" >
+        <mat-icon>
+          transgender
+
+        </mat-icon>
+        {{user.race}}
+      </a>
+      <a mat-list-item  routerLink="update-user/{{currentUserId}}" routerLinkActive="list-item-active" >
+        <mat-icon>
+          local_dining
+        </mat-icon>
+        {{user.nourriture}}
+      </a>
+    </div>
+
+  </div>
+
+</mat-nav-list>
+
+
+
+
+

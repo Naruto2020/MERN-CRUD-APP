@@ -1,0 +1,35 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="toggleSidebar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Schtroumpf_Book</span>
+
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+      <ul fxLayout="row" >
+       <li>
+        <button mat-icon-button>
+          <mat-icon>settings</mat-icon>
+        </button>
+       </li>
+       <li>
+         <button mat-icon-button>
+           <mat-icon>notifications_active</mat-icon>
+         </button>
+       </li>
+       <li>
+         <button mat-icon-button [matMenuTriggerFor]="menu">
+           <mat-icon >person_outline</mat-icon>
+         </button>
+         <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="deco()">
+            <mat-icon>exit_to_app</mat-icon>
+            <span>sing out</span>
+          </button>
+         </mat-menu>
+       </li>
+      </ul>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+

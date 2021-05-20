@@ -1,0 +1,50 @@
+.box-table {
+  width: 100%;
+  overflow-x: auto;
+}
+mat-toolbar {
+  width: 75%;
+}
+table {
+  width: 75%;
+}
+
+mat-paginator {
+  width: 75%;
+}
+
+#add {
+  color: green;
+}
+
+/*media queries */
+@media all and (max-width: 980px) {
+  mat-toolbar {
+    width: 100%;
+    margin: 0%;
+  }
+
+  table {
+    width: 100%;
+    margin: 0%;
+  }
+
+  mat-paginator {
+    width: 100%;
+    margin: 0%;
+  }
+}
+
+@media all and (min-width: 980px) and (max-width: 1024px) {
+  mat-toolbar {
+    width: 80%;
+  }
+
+  table {
+    width: 80%;
+  }
+
+  mat-paginator {
+    width: 80%;
+  }
+}
