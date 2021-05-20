@@ -7,6 +7,7 @@ import {AccountComponent} from './components/account/account.component';
 import {AddUsrComponent} from './components/add-usr/add-usr.component';
 import {EditUserComponent} from './components/edit-user/edit-user.component';
 import {DeleteFriendComponent} from './components/delete-friend/delete-friend.component';
+import {AuthGuard} from './auth.guard';
 
 const routes: Routes = [
   {
@@ -20,6 +21,7 @@ const routes: Routes = [
   {
     path:"home",
     component:HomeComponent,
+    canActivate : [AuthGuard],
     children:[
       {
         path:"add-user/:_id",
@@ -30,6 +32,7 @@ const routes: Routes = [
   {
     path:"account",
     component:AccountComponent,
+    canActivate : [AuthGuard],
     children:[
       {
         path:"update-user/:_id",
