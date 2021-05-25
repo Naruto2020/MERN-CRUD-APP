@@ -39,7 +39,6 @@ export class CreateUsersComponent implements OnInit {
       username:"",
       email:"",
       password:"",
-      idTofollow:""
     });
   }
 
@@ -50,6 +49,8 @@ export class CreateUsersComponent implements OnInit {
     newUser.email = formValue["email"];
     newUser.password = formValue["password"];
     this.api.signUp(newUser).subscribe(res =>{
+      console.log("si",res);
+
       let results:any[] = Object.values(res);
       console.log(results);
 
@@ -64,27 +65,8 @@ export class CreateUsersComponent implements OnInit {
         this.soumissionPseu = true;
 
       if(!errorUsername && !errorEmail && !errorPassword)
-        this.route.navigate(["/home"]);
+        this.route.navigate([`/home/add-user/${res.newUser}`]);
       this.options.reset({});
-
-      /** envois de la demande d'amis et ajout a la liste des utilisateurs  */
-      // recupération de la data
-      this.options.controls.idTofollow.setValue(this.currentUserId);
-      const formValue = this.options.value;
-      console.log("dataID",formValue)
-
-      // recuperation de l'id
-      this.router.paramMap.subscribe(paramMap =>{
-        if(!paramMap.has("_id")){
-          return;
-        }
-        const usrId = paramMap.get("_id");
-        // ajout de l'utilisateur
-        this.api.addFriends(usrId, formValue).subscribe(res =>{
-          console.log("loock",res);
-          return res;
-        });
-      });
       return res;
 
     });

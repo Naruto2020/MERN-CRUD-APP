@@ -47,7 +47,7 @@ const routes: Routes = [
     component:EditUserComponent
   },
   {
-    path:"creat-user",
+    path:"creat-user/:_id",
     component:CreateUsersComponent
   }
 ];

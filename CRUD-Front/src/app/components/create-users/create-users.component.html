@@ -61,11 +61,11 @@
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
       </mat-form-field>
-      <mat-form-field appearance="fill" *ngIf>
+      <!--<mat-form-field appearance="fill" >
         <mat-label>Input</mat-label>
         <input matInput  formControlName="idTofollow">
 
-      </mat-form-field>
+      </mat-form-field>-->
       <span *ngIf="soumissionMdp" style="color: red;font-weight: bold;"> le mot de passe doit faire 6     caractères minimum!
         <button
           (click)="fermerAlert()"
