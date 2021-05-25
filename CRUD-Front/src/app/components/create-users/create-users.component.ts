@@ -53,13 +53,6 @@ export class CreateUsersComponent implements OnInit {
       let results:any[] = Object.values(res);
       console.log(results);
 
-      /*for(let i=0; i<res.length; i++){
-        let tab1 = res[i].followings;
-
-      }*/
-
-
-
       let errorEmail = results[0].email;
       let errorPassword = results[0].password;
       let errorUsername = results[0].username;
@@ -73,6 +66,8 @@ export class CreateUsersComponent implements OnInit {
       if(!errorUsername && !errorEmail && !errorPassword)
         this.route.navigate(["/home"]);
       this.options.reset({});
+
+      /** envois de la demande d'amis et ajout a la liste des utilisateurs  */
       // recupération de la data
       this.options.controls.idTofollow.setValue(this.currentUserId);
       const formValue = this.options.value;
