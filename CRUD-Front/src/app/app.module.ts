@@ -30,6 +30,7 @@ import { AccountContentComponent } from './components/account/account-content/ac
 import { AddUsrComponent } from './components/add-usr/add-usr.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
 import { DeleteFriendComponent } from './components/delete-friend/delete-friend.component';
+import { CreateUsersComponent } from './components/create-users/create-users.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { DeleteFriendComponent } from './components/delete-friend/delete-friend.
     AccountContentComponent,
     AddUsrComponent,
     EditUserComponent,
-    DeleteFriendComponent
+    DeleteFriendComponent,
+    CreateUsersComponent
   ],
   imports: [
     BrowserModule,

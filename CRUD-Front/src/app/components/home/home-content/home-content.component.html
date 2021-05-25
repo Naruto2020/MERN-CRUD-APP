@@ -38,17 +38,17 @@
     </ng-container>
 
     <!-- Update Column -->
-    <!--<ng-container matColumnDef="delete">
-      <th mat-header-cell *matHeaderCellDef> Delete </th>
+    <ng-container matColumnDef="create">
+      <th mat-header-cell *matHeaderCellDef> create user </th>
       <td mat-cell *matCellDef="let element">
-        <a mat-button (click)="cancelUsers()">
-          <span class="material-icons" routerLink="/home/{{element._id}}" id="delete">
-            delete_outline
+        <a mat-button>
+          <span class="material-icons" routerLink="/creat-user" id="create">
+            add
           </span>
 
         </a>
       </td>
-    </ng-container>-->
+    </ng-container>
 
 
     <tr mat-header-row *matHeaderRowDef="columnsList"></tr>

@@ -13,8 +13,7 @@ import {ApiService} from '../../api.service';
   styleUrls: ['./account-content.component.scss']
 })
 export class AccountContentComponent implements OnInit {
-currentUserId:any;
-
+  currentUserId:any;
   columnsList: string[] = [ 'username', 'age', 'famille', "race", "nourriture", "delete"];
 
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;

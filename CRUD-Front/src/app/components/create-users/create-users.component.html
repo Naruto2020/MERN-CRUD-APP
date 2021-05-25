@@ -1,0 +1,92 @@
+<!--<mat-toolbar>
+  <h1>Schtroumpf_Book</h1>
+</mat-toolbar>
+
+<div class="info">
+  <h2>Bienvenue dans votre communauté <strong>Schtroumpf_Book</strong><span><img src="https://i0.wp.com/lescontesdeperecastor.unblog.fr/files/2010/03/legrandschtroumpf.jpg" alt="logo"></span></h2>
+  <p>Déjas inscrit ? <a routerLink="/login">Connecter vous </a></p>
+</div>-->
+
+<mat-toolbar >
+  <a mat-stroked-button routerLink="/home" >
+    <span class="material-icons" id="add" >
+      arrow_back_ios
+    </span>
+  </a>
+  <h1>Create User</h1>
+</mat-toolbar>
+<br/>
+
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+  <mat-card >
+    <mat-toolbar >Inscription</mat-toolbar>
+    <form [formGroup]="options" fxLayoutAlign="strech" fxLayout="column" class="sign-form" (ngSubmit)="addUser()">
+
+      <mat-form-field appearance="fill" [floatLabel]="floatLabelControl.value">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="username" formControlName="username">
+      </mat-form-field>
+      <span *ngIf="soumissionPseu" style="color: red;font-weight: bold;">username incorrect ou déjà pris!
+        <button
+          (click)="fermerAlert()"
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </span>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" formControlName="email">
+      </mat-form-field>
+      <span *ngIf="soumissionMail" style="color: red;font-weight: bold;"> Email incorrect!
+        <button
+          (click)="fermerAlert()"
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </span>
+
+      <mat-form-field appearance="fill" [floatLabel]="floatLabelControl.value">
+        <mat-label>password</mat-label>
+        <input matInput placeholder="Simple placeholder" formControlName="password" [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+      <mat-form-field appearance="fill" *ngIf>
+        <mat-label>Input</mat-label>
+        <input matInput  formControlName="idTofollow">
+
+      </mat-form-field>
+      <span *ngIf="soumissionMdp" style="color: red;font-weight: bold;"> le mot de passe doit faire 6     caractères minimum!
+        <button
+          (click)="fermerAlert()"
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </span>
+
+      <button type="submit" value="Inscription" mat-raised-button >Create User</button>
+
+    </form>
+
+  </mat-card>
+
+</div>
+
+
+
+
+

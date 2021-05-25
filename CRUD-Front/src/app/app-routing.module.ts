@@ -5,6 +5,7 @@ import {SignInComponent} from './components/sign-in/sign-in.component';
 import {HomeComponent} from './components/home/home.component';
 import {AccountComponent} from './components/account/account.component';
 import {AddUsrComponent} from './components/add-usr/add-usr.component';
+import {CreateUsersComponent} from './components/create-users/create-users.component';
 import {EditUserComponent} from './components/edit-user/edit-user.component';
 import {DeleteFriendComponent} from './components/delete-friend/delete-friend.component';
 import {AuthGuard} from './auth.guard';
@@ -26,7 +27,8 @@ const routes: Routes = [
       {
         path:"add-user/:_id",
         component:AddUsrComponent
-      }
+      },
+
     ]
   },
   {
@@ -44,6 +46,10 @@ const routes: Routes = [
     path:"update-user/:_id",
     component:EditUserComponent
   },
+  {
+    path:"creat-user",
+    component:CreateUsersComponent
+  }
 ];
 
 @NgModule({
